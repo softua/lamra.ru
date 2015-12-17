@@ -8,6 +8,10 @@
 
     <!-- Bootstrap -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- CSS Fancybox -->
+    <link rel="stylesheet" href="resources/css/jquery.fancybox.min.css" type="text/css" media="screen" />
 
     <!-- Loading Elements Styles -->   
     <link href="resources/css/styles.css" rel="stylesheet">
@@ -32,46 +36,54 @@
         <nav>
           <div class="container">        
             <div class="col-sm-6 padding_none">
-              <ul class="nav nav-justified">
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Пункты самовывоза</a></li>
-                <li><a href="#">Оплата</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#" data-toggle="dropdown" aria-expanded="true">Еще</a>
-
-                  <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
-                    <!-- User dropdown menu -->
-                    <ul class="nav">
-                      <li>
-                        <a href="#">Еще</a>
-                      </li>
-                      <li>
-                        <a href="#">Еще</a>
-                      </li>
-                      <li>
-                        <a href="#">Еще</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
+              ​<div class="navbar-header">
+                <button type="button" class="navbar-toggle navbar-inverse" data-click="sidebar-toggled" data-toggle="collapse" data-target="#navbar-top-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-top-collapse">
+                <ul class="nav nav-justified">
+                  <li><a href="#">Доставка</a></li>
+                  <li><a href="#">Пункты самовывоза</a></li>
+                  <li><a href="#">Оплата</a></li>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#" data-toggle="dropdown" aria-expanded="true">Еще</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <!-- User dropdown menu -->
+                      <ul class="nav">
+                        <li>
+                          <a href="#">Еще</a>
+                        </li>
+                        <li>
+                          <a href="#">Еще</a>
+                        </li>
+                        <li>
+                          <a href="#">Еще</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="col-sm-5 col-sm-offset-1">
               <ul class="nav nav-justified">
                 <li><a href="#">Избранное</a></li>
                 <li><a href="#" data-toggle="dropdown" aria-expanded="true">Личный кабинет</a>
 
-                  <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
+                  <div class="dropdown-menu dropdown-menu-right">
                     <!-- User dropdown menu -->
                     <ul class="nav">
                       <li>
-                        <a href="#">Еще</a>
+                        <a href="#">Личный кабинет</a>
                       </li>
                       <li>
-                        <a href="#">Еще</a>
+                        <a href="#">Личный кабинет</a>
                       </li>
                       <li>
-                        <a href="#">Еще</a>
+                        <a href="#">Личный кабинет</a>
                       </li>
                     </ul>
                   </div>
@@ -81,21 +93,1452 @@
             </div>
           </div>
         </nav><!-- NAVIGATION -->
+        <div class="header_top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="index.html"><p class="logo">Lamra.ru</p></a>
+                <p>Все для праздников и свадеб</p>
+              </div><!-- col-md-3 col-sm-6 col-xs-12 -->
+              <div class="col-md-3 col-sm-6 col-xs-12 delivery_map padding_left">
+                <p>Доставка по<br>всей России</p>
+              </div><!-- col-md-3 col-sm-6 col-xs-12 -->
+              <div class="col-md-3 col-sm-6 col-xs-12 contact padding_left">
+                <p class="email"><a href="mailto:info@svadbastyle.com">info@svadbastyle.com</a></p>
+                <p class="phone"><a href="tel:88005557070">8 800 555 70 70</a></p>
+                <p>Звоните нам с <span>10:00</span> до <span>19:00</span></p>
+              </div><!-- col-md-3 col-sm-6 col-xs-12 -->
+              <div class="col-md-3 col-sm-6 col-xs-12 consult">
+                <p>Консультации:</p>
+                <p>Пн-Пт: <span>9:00-12:00</span>/ Суб,Вс: <span>выходной</span></p>
+                <button class="btn btn-default">Перезвоните мне</button>
+              </div><!-- col-md-3 col-sm-6 col-xs-12 -->
+            </div><!-- row -->
+          </div><!-- container -->
+        </div><!-- header_top -->
+        <div class="search_cart">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Введите свой запрос">
+                  <span class="input-group-addon">Поиск</span>
+                </div>
+              </div><!-- col-md-6 -->
+              <div class="col-md-6 padding_none">
+                <div class="col-sm-6 cart text-center padding_none">
+                  <span class="red_circle">10</span>
+                  <p class="data_cart" data-placement="top" data-toggle="tooltip" title="От 15 000₽ скидка 7%">Cумма заказа <span>20 185<span class="fa fa-ruble"></span></span></p>
+                  <p data-toggle="dropdown" aria-expanded="true">
+                    <span class="arr_down"></span>
+                    <div class="dropdown-menu">
+                      <!-- User dropdown menu -->
+                      <ul class="nav">
+                        <li>
+                          <a href="korzina.html">В вашей корзине <span>6</span> объектов</a>
+                        </li>
+                        <li class="in_total">
+                          <a href="korzina.html">Итого: <span>20 185<span class="fa fa-ruble"></span></span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </p>
+                </div><!-- cart -->
+                <div class="present">
+                    <button class="btn btn-default">Оформить заказ</button>
+                    <p>Подарок<br>уже тут</p>
+                </div><!-- present -->
+              </div><!-- col-md-6 -->
+            </div><!-- row -->
+          </div><!-- container -->
+        </div><!-- search_cart -->
+        <div class="steps">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-1 padding_none">
+                <p>Как<br><span>заказать</span></p>
+              </div><!-- col-sm-1 -->
+              <div class="col-sm-11 padding_none">
+                <ul class="nav nav-justified">
+                  <li><p>Выберите товар,<br>который хотите купить</p></li>
+                  <li><p>Нажмите кнопку «Купить»<br>и товар попадет в корзину</p></li>
+                  <li><p>Перейдите в корзину и<br>заполните данные о<br>доставке и оплате</p></li>
+                  <li><p>Вам перезвонит менеджер для<br>подтверждения заказа</p></li>
+                </ul>  
+              </div><!-- col-sm-11 -->
+            </div><!-- row -->
+          </div><!-- container -->
+        </div><!-- steps -->
       </header>
-      <section>
-        
-      </section>
-      <aside>
-        
-      </aside>
+      <div class="wrap_content">
+        <div class="container">
+          <section class="col-sm-9 col-sm-push-3 padding_right text-center">
+              <h1>Товары для свадьбы</h1>
+              <h4>Размещайте заказы круглосуточно</h4>
+              <div class="panel panel-primary">
+          
+                <!--Panel heading-->
+                <div class="panel-heading padding_none">
+                  <div class="col-md-4 hidden-sm hidden-xs"></div>
+                  <div class="panel-control col-md-4 col-sm-12 padding_none">          
+                    <!--Nav tabs-->
+                    <ul class="nav nav-justified">
+                      <li class="active"><a data-toggle="tab" href="#tabs-box-1" aria-expanded="true">Популярные</a>
+                      </li>
+                      <li class=""><a data-toggle="tab" href="#tabs-box-2" aria-expanded="false">Новинки</a>
+                      </li>
+                    </ul>          
+                  </div><!-- panel-control -->
+                  <div class="col-md-4 hidden-sm hidden-xs"></div>
+                </div><!-- panel-heading -->
+          
+                <!--Panel body-->
+                <div class="panel-body">          
+                  <!--Tabs content-->
+                  <div class="tab-content">
+                    <div id="tabs-box-1" class="tab-pane fade active in">
+                      <article>
+                        <h3>Свадебные товары</h3>
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <a class="fancyimage" data-fancybox-group="group1"  href="resources/images/weddings_goods/bride.jpg">
+                              <img class="img img-responsive" src="resources/images/weddings_goods/bride.jpg" alt="bride">
+                            </a>
+                            <div class="title_block"><p>Аксессуары для Жениха и Невесты</p></div>
+                            <ul class="list-inline">
+                              <li><a href="#">Букеты невесты</a></li>
+                              <li><a href="#">Бутоньерки</a></li>
+                              <li><a href="#">Заколки</a></li>
+                              <li><a href="#">Подвязки</a></li>
+                              <li><a href="#">Веера</a></li>
+                              <li><a href="#">Зонтики</a></li>
+                              <li><a href="#">Сумочки</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <a class="fancyimage" data-fancybox-group="group1"  href="resources/images/weddings_goods/witness.jpg">
+                              <img class="img img-responsive" src="resources/images/weddings_goods/witness.jpg" alt="witness">
+                            </a>
+                            <div class="title_block"><p>Аксессуары для свидетелей</p></div>
+                            <ul class="list-inline">
+                              <li><a href="#">Браслеты для свидетельницы</a></li>
+                              <li><a href="#">Ленты для Свидетелей</a></li>
+                              <li><a href="#">Свадебные значки</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <a class="fancyimage" data-fancybox-group="group1"  href="resources/images/weddings_goods/basket.jpg">
+                              <img class="img img-responsive" src="resources/images/weddings_goods/basket.jpg" alt="basket">
+                            </a>
+                            <div class="title_block"><p>Все для развлечения гостей</p></div>
+                            <ul class="list-inline">
+                              <li><a href="#">Лепестки роз и корзинки</a></li>
+                              <li><a href="#">Кольца</a></li>
+                            </ul>
+                          </div>
+                        </div><!-- row -->
+                      </article>
+                      <article>
+                        <h3>Все для Пасхи</h3>
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <a class="fancyimage" data-fancybox-group="group2"  href="resources/images/easter/dollars.jpg">
+                              <img class="img img-responsive" src="resources/images/easter/dollars.jpg" alt="dollars">
+                            </a>
+                            <div class="title_block"><p>Выкуп Невесты</p></div>
+                            <ul class="list-inline">
+                              <li><a href="#">Букеты невесты</a></li>
+                              <li><a href="#">Бутоньерки</a></li>
+                              <li><a href="#">Заколки</a></li>
+                              <li><a href="#">Подвязки</a></li>
+                              <li><a href="#">Веера</a></li>
+                              <li><a href="#">Зонтики</a></li>
+                              <li><a href="#">Сумочки</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <a class="fancyimage" data-fancybox-group="group2"  href="resources/images/easter/pink_rings.jpg">
+                              <img class="img img-responsive" src="resources/images/easter/pink_rings.jpg" alt="rings">
+                            </a>
+                            <div class="title_block"><p>Все для свадьбы</p></div>
+                            <ul class="list-inline">
+                              <li><a href="#">Браслеты для свидетельницы</a></li>
+                              <li><a href="#">Ленты для Свидетелей</a></li>
+                              <li><a href="#">Свадебные значки</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <a class="fancyimage" data-fancybox-group="group2"  href="resources/images/easter/boxes.jpg">
+                              <img class="img img-responsive" src="resources/images/easter/boxes.jpg" alt="boxes">
+                            </a>
+                            <div class="title_block"><p>Печатная продукция</p></div>
+                            <ul class="list-inline">
+                              <li><a href="#">Лепестки роз и корзинки</a></li>
+                              <li><a href="#">Кольца</a></li>
+                            </ul>
+                          </div>
+                        </div><!-- row -->
+                      </article>
+                      <article>
+                        <h3>Все для Пасхи</h3>
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <a class="fancyimage" data-fancybox-group="group2"  href="resources/images/easter/pink_bow-knot.jpg">
+                              <img class="img img-responsive" src="resources/images/easter/pink_bow-knot.jpg" alt="bow-knot">
+                            </a>
+                            <div class="title_block"><p>Свадебные аксессуары</p></div>
+                            <ul class="list-inline">
+                              <li><a href="#">Песочная церемония</a></li>
+                              <li><a href="#">Рушники,солонки для каравая</a></li>
+                              <li><a href="#">Свадебные замки</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <a class="fancyimage" data-fancybox-group="group2"  href="resources/images/easter/candle.jpg">
+                              <img class="img img-responsive" src="resources/images/easter/candle.jpg" alt="candle">
+                            </a>
+                            <div class="title_block"><p>Свечи праздничные</p></div>
+                            <ul class="list-inline">
+                              <li><a href="#">Свадебные свечи</a></li>
+                              <li><a href="#">Свадебные подсвечники</a></li>
+                              <li><a href="#">Тортовые свечи цифры</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-4">
+                            <a class="fancyimage" data-fancybox-group="group2"  href="resources/images/easter//car.jpg">
+                              <img class="img img-responsive" src="resources/images/easter/car.jpg" alt="car">
+                            </a>
+                            <div class="title_block"><p>Украшение автомобиля</p></div>
+                            <ul class="list-inline">
+                              <li><a href="#">Бонбоньерки</a></li>
+                              <li><a href="#">Гирлянды</a></li>
+                              <li><a href="#">Дипломы и грамоты</a></li>
+                              <li><a href="#">Конверты для денег</a></li>
+                            </ul>
+                          </div>
+                        </div><!-- row -->
+                      </article>                      
+                    </div><!-- tabs-box-1 -->
+                    <div id="tabs-box-2" class="tab-pane fade">
+                      <h3>Здесь ничего пока нет</h3>
+                    </div><!-- tabs-box-2 -->
+                  </div><!-- tab-content -->
+                </div><!-- panel-body -->
+              </div><!-- panel -->
+              <div class="brands">
+                <h3>Торговые марки</h3>
+                <div id="carousel-logo" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner" role="listbox">                    
+                    <div class="item active">
+                      <div class="col-sm-3 padding_none">
+                        <img class="img img-responsive" src="resources/images/brands/logo_brands.jpg" alt="logo_brands">
+                      </div>
+                      <div class="col-sm-3 padding_none">
+                        <img class="img img-responsive" src="resources/images/brands/manufacturer.jpg" alt="manufacturer">
+                      </div>
+                      <div class="col-sm-3 padding_none">
+                        <img class="img img-responsive" src="resources/images/brands/sample_logo.jpg" alt="sample_logo">
+                      </div>
+                      <div class="col-sm-3 padding_none">
+                        <img class="img img-responsive" src="resources/images/brands/e-log.jpg" alt="e-log">
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="col-sm-3 padding_none">
+                        <img class="img img-responsive" src="resources/images/brands/logo_brands.jpg" alt="logo_brands">
+                      </div>
+                      <div class="col-sm-3 padding_none">
+                        <img class="img img-responsive" src="resources/images/brands/manufacturer.jpg" alt="manufacturer">
+                      </div>
+                      <div class="col-sm-3 padding_none">
+                        <img class="img img-responsive" src="resources/images/brands/sample_logo.jpg" alt="sample_logo">
+                      </div>
+                      <div class="col-sm-3 padding_none">
+                        <img class="img img-responsive" src="resources/images/brands/e-log.jpg" alt="e-log">
+                      </div>
+                    </div>                                                
+
+                  </div>
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-logo" role="button" data-slide="prev">
+                    <span class="arrow"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-logo" role="button" data-slide="next">
+                    <span class="arrow"></span>
+                  </a>
+                </div>
+              </div><!-- brands -->
+              <div class="top_sale">
+                <h2 class="text-center">Топ продаж</h2>
+                <div id="slider" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#slider" data-slide-to="1"></li>
+                    <li data-target="#slider" data-slide-to="2"></li>
+                    <li data-target="#slider" data-slide-to="3"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <div class="col-md-8 padding_left">
+                        <img class="img img-responsive" src="resources/images/sales_top/slider1.jpg" alt="slider">
+                        <div class="carousel-caption"><p>Прекрасное украшение безошибочно определяет виновницу торжества как главную особу и возвышает над свитой <a href="#"><span class="arr_right"></span></a></p></div>
+                      </div>
+                      <div class="col-md-4">
+                        <h4>Диадема <span>серебро</span></h4>
+                        <p>артикул 12845</p>
+                        <p class="price">2780 <span><sup><span class="fa fa-ruble"></span></sup></span></p>
+                        <button class="btn btn-default">Купить</button>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="col-md-8">
+                        <img class="img img-responsive" src="resources/images/sales_top/slider1.jpg" alt="slider">
+                        <div class="carousel-caption"><p>Прекрасное украшение безошибочно определяет виновницу торжества как главную особу и возвышает над свитой <a href="#"><span class="arr_right"></span></a></p></div>
+                      </div>
+                      <div class="col-md-4">
+                        <h4>Диадема <span>серебро</span></h4>
+                        <p>артикул 12845</p>
+                        <p class="price">2780 <span><sup><span class="fa fa-ruble"></span></sup></span></p>
+                        <button class="btn btn-default">Купить</button>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="col-md-8">
+                        <img class="img img-responsive" src="resources/images/sales_top/slider1.jpg" alt="slider">
+                        <div class="carousel-caption"><p>Прекрасное украшение безошибочно определяет виновницу торжества как главную особу и возвышает над свитой <a href="#"><span class="arr_right"></span></a></p></div>
+                      </div>
+                      <div class="col-md-4">
+                        <h4>Диадема <span>серебро</span></h4>
+                        <p>артикул 12845</p>
+                        <p class="price">2780 <span><sup><span class="fa fa-ruble"></span></sup></span></p>
+                        <button class="btn btn-default">Купить</button>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="col-md-8">
+                        <img class="img img-responsive" src="resources/images/sales_top/slider1.jpg" alt="slider">
+                        <div class="carousel-caption"><p>Прекрасное украшение безошибочно определяет виновницу торжества как главную особу и возвышает над свитой <a href="#"><span class="arr_right"></span></a></p></div>
+                      </div>
+                      <div class="col-md-4">
+                        <h4>Диадема <span>серебро</span></h4>
+                        <p>артикул 12845</p>
+                        <p class="price">2780 <span><sup><span class="fa fa-ruble"></span></sup></span></p>
+                        <button class="btn btn-default">Купить</button>
+                      </div>
+                    </div>
+
+                  </div> 
+
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+                    <span class="glyphicon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+                    <span class="glyphicon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div><!-- top_sale -->
+              <article class="welcome">
+                <div class="col-sm-12 padding_none">
+                  <div class="col-sm-6 add_border left padding_left">
+                    <h5>Оптовая дистрибуция</h5>
+                    <p>Поставка товаров для профессиональной торговой деятельности <a href="#"><span class="arr_right"></span></a></p>
+                  </div>
+                  <div class="col-sm-6 add_border right padding_right">
+                    <h5>Поставки в розничные магазины и супермаркеты</h5>
+                    <p>Поставка товаров для сетевых торговых структур и розничных магазинов <a href="#"><span class="arr_right"></span></a></p>
+                  </div>
+                </div>
+                <div class="col-sm-12 acquaintance padding_none">
+                  <div class="col-sm-8 padding_left">
+                    <h5>Добро пожаловать в наш магазин</h5>
+                    <p>Компания является одним из ведущих оптово - розничных поставщиков свадебных аксессуаров. Наша компания активно развивается на Российском рынке свадебных аксессуаров, постоянно внедряя новые группы товаров. Многолетний опыт работы способствовал приобретению прочных торговых взаимоотношений со многими производителями из стран Юго-Восточной Азии и Европы.</p>
+                    <p>Мы предлагаем большой ассортимент свадебных аксессуаров, необходимый для работы свадебных салонов, фирм занимающихся организацией различных праздников, ведущих и организаторов свадебных торжеств. <a href="#"><span class="arr_right"></span></a></p>
+                  </div>
+                  <div class="col-sm-4 padding_none">
+                    <div class="col-sm-12 padding_none">
+                      <div class="col-sm-4 padding_none">
+                        <img class="img img-responsive img-circle" src="resources/images/form_data/manager.jpg">
+                      </div><!-- col-sm-4 -->
+                      <div class="col-sm-8 padding_right">
+                        <h6>Елизавета</h6>
+                        <p class="ital">Я помогу вам с выбором, оставьте свой номер</p>
+                      </div><!-- col-sm-8 -->
+                    </div><!-- col-sm-12 -->
+                    <div class="form_phone">
+                      <h6>Обратный звонок</h6>
+                      <form id="bv-bsc" class="form-horizontal" action="#" method="post">
+                        <div class="tab-content">
+                          <div class="" id="bsc-1">
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control" name="fullName" placeholder="Ваше имя">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control" name="phoneNumber" placeholder="Телефон">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-footer clearfix">
+                            <div class="col-sm-12 padding_none">
+                              <button type="submit" class="btn btn-default btn-labeled btn-block">Перезвонить мне</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                      <p class="ital">или позвоните нам по тел:</p>
+                      <p class="call_phone"><a href="tel:88005007575">8 800 500 75 75</a></p>
+                    </div><!-- form_phone -->
+                  </div><!-- col-sm-4 -->
+                </div><!-- acquaintance -->
+              </article><!-- welcome -->
+              <article class="newlyweds">
+                <div class="col-sm-12 padding_none our_serv_icons">
+                  <div class="row">
+                    <div class="col-sm-4 serv">
+                      <h5>Доставка по всей России</h5>
+                    </div>
+                    <div class="col-sm-4 serv">
+                      <h5>Все виды оплаты</h5>
+                      <p>наличные, банковские карты, платежные системы</p>
+                    </div>
+                    <div class="col-sm-4 serv">
+                      <h5>Бесплатная доставка</h5>
+                      <p>по Санкт-Перербургу и Москве</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 memo">
+                  <div class="col-sm-10 col-sm-offset-1 title_block">
+                    <h3>Памятка молодоженам</h3>
+                    <p>Чек-лист для подготовки свадьбы. Проверь себя!</p>
+                  </div><!-- col-sm-10 -->
+                  <p>Отметьте галочками товары, которые вы уже добавили в корзину.</p>
+                  <p>Узнайте, какие еще украшения помогут довести вашу свадьбу до совершенства.</p>
+                  <p>Эта онлайн-памятка всегда под рукой. Приятных покупок!</p>
+
+                  <div class="tab-base tab-stacked-left">          
+                    <!--Nav tabs-->
+                    <ul class="nav nav-tabs">
+                      <li class="active">
+                        <a data-toggle="tab" href="#stk-lft-tab-1" aria-expanded="true">Аксессуары для невесты</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-2" aria-expanded="false">Аксессуары для жениха</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-3" aria-expanded="false">Все для свидетелей и друзей</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-4" aria-expanded="false">Все для гостей</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-5" aria-expanded="false">Обряды и традиции</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-6" aria-expanded="false">Украшения на автомобили</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-7" aria-expanded="false">Для прогулки и фотосессии</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-8" aria-expanded="false">Аксессуары для ЗАГСа</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-9" aria-expanded="false">Веселье и конкурсы</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-10" aria-expanded="false">Выкуп невесты</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-11" aria-expanded="false">Декорации и украшения</a>
+                      </li>
+                      <li class="">
+                        <a data-toggle="tab" href="#stk-lft-tab-12" aria-expanded="false">Банкет</a>
+                      </li>
+                    </ul>
+                    <!--Tabs Content-->
+                    <div class="tab-content">
+                      <div id="stk-lft-tab-1" class="tab-pane fade active in">
+                        <div class="checkbox form-block">
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Бижутерия"> Бижутерия <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Диадема, ободок"> Диадема, ободок <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Украшения для прически"> Украшения для прически <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Шпильки и невидимки"> Шпильки и невидимки <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Подвязка"> Подвязка <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Сумочка"> Сумочка <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Клатч"> Клатч <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Чулки и колготки"> Чулки и колготки <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Перчатки"> Перчатки <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Бюстгальтер-невидимка"> Бюстгальтер-невидимка <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                          <label class="form-checkbox form-icon form-text">
+                            <input type="checkbox" name="item" value="Свадебный зонтик"> Свадебный зонтик <a href="#"><span class="arr_right"></span></a>
+                          </label>
+                        </div>
+                      </div>
+                      <div id="stk-lft-tab-2" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                      <div id="stk-lft-tab-3" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                      <div id="stk-lft-tab-4" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                      <div id="stk-lft-tab-5" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                      <div id="stk-lft-tab-6" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                      <div id="stk-lft-tab-7" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                      <div id="stk-lft-tab-8" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                      <div id="stk-lft-tab-9" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                      <div id="stk-lft-tab-10" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                      <div id="stk-lft-tab-11" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                      <div id="stk-lft-tab-12" class="tab-pane fade">
+                        <h4>Здесь пока ничего нет</h4>
+                      </div>
+                    </div>
+                  </div><!-- tab-base tab-stacked-left -->
+                </div><!-- memo -->
+                <div class="col-sm-12 padding_none about_wedding">
+                  <div class="col-sm-6 bef_aft padding_left">
+                    <h3>Все о свадьбе...До и после</h3>
+                    <ul class="list-inline">
+                      <li><a href="#">Подготовка к свадьбе</a></li>
+                      <li><a href="#">Ресторан для свадьбы</a></li>
+                      <li><a href="#">Праздничный банкет</a></li>
+                      <li><a href="#">Медовый месяц</a></li>
+                      <li><a href="#">Свадебная мода</a></li>
+                      <li><a href="#">Сладкий стол</a></li>
+                      <li><a href="#">Выкуп невесты</a></li>
+                      <li><a href="#">Конкурсы на свадьбу</a></li>
+                      <li><a href="#">Подготовка к свадьбе</a></li>
+                      <li><a href="#">Ресторан для свадьбы</a></li>
+                      <li><a href="#">Праздничный банкет</a></li>
+                      <li><a href="#">Медовый месяц</a></li>
+                      <li><a href="#">Свадебная мода</a></li>
+                      <li><a href="#">Сладкий стол</a></li>
+                      <li><a href="#">Выкуп невесты</a></li>
+                      <li><a href="#">Конкурсы на свадьбу</a></li>
+                      <li><a href="#">Подготовка к свадьбе</a></li>
+                      <li><a href="#">Ресторан для свадьбы</a></li>
+                      <li><a href="#">Праздничный банкет</a></li>
+                    </ul>                    
+                  </div>
+                  <div class="col-sm-6 we_recommend padding_right">
+                    <h3>Мы рекомендуем:</h3>
+                    <ul class="">
+                      <li><a href="#">Кафе «Кариночка». Лучшая свадьба в Тольятти! <span class="arr_right"></span></a></li>
+                      <li><a href="#">Магазин «Свадебная мечта»: более 7 000 свадебных аксессуаров! <span class="arr_right"></span></a></li>
+                      <li><a href="#">Заказ микроавтобусов и аренда автобусов для перевозки гостей на свадьбу. <span class="arr_right"></span></a></li>
+                      <li><a href="#">Приглашения на свадьбу. <span class="arr_right"></span></a></li>
+                      <li><a href="#">Украшение зала на свадьбу. <span class="arr_right"></span></a></li>
+                      <li><a href="#">Нужна помощь в оформлении свадьбы? Вам сюда! <span class="arr_right"></span></a></li>
+                    </ul>
+                  </div>
+                </div><!-- about_wedding -->
+              </article><!-- newlyweds -->
+              <div class="turnkey_solutions">
+                <h3>Готовые решения</h3>
+                <div class="col-sm-12 padding_none">
+                  <div class="red">
+                    <p>Распродажи и акции</p>
+                  </div>
+                  <div class="black">
+                    <p>Джентельменский набор<br><span>для любого праздника</span></p>
+                  </div>
+                </div><!-- col-sm-12 -->
+                <div class="col-sm-12 padding_none another_cart">
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-cart" role="button" data-slide="prev">
+                    <span class="arrow"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-cart" role="button" data-slide="next">
+                    <span class="arrow"></span>
+                  </a>
+                  <div class="col-sm-9 padding_none">
+                    <div id="carousel-cart" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <div class="col-sm-4 col-xs-6 padding_none">
+                            <label class="form-checkbox form-icon form-text">
+                              <input type="checkbox" name="item" value="">
+                            </label>
+                            <a href="#"><img class="img img-responsive img-thumbnail" src="resources/images/goods/wineglass_goods.jpg" alt="wineglass"></a>
+                            <p>Инструмент</p>
+                            <p class="title">Коктельный бокал</p>
+                            <p class="price">1950<span class="fa fa-ruble"></span></p>
+                          </div>
+                          <div class="col-sm-4 col-xs-6 padding_none">
+                            <label class="form-checkbox form-icon form-text">
+                              <input type="checkbox" name="item" value="">
+                            </label>
+                            <a href="#"><img class="img img-responsive img-thumbnail" src="resources/images/goods/two_wineglasses.jpg" alt="two_wineglasses"></a>
+                            <p>Инструмент</p>
+                            <p class="title">Стакан для смещивания</p>
+                            <p class="price">1950<span class="fa fa-ruble"></span></p>
+                          </div>
+                          <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 padding_none">
+                            <label class="form-checkbox form-icon form-text">
+                              <input type="checkbox" name="item" value="">
+                            </label>
+                            <a href="#"><img class="img img-responsive img-thumbnail" src="resources/images/goods/holiday_candle.jpg" alt="holiday_candle"></a>
+                            <p>Инструмент</p>
+                            <p class="title">Коктельный бокал</p>
+                            <p class="price">1950<span class="fa fa-ruble"></span></p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="col-sm-4 col-xs-6 padding_none">
+                            <label class="form-checkbox form-icon form-text">
+                              <input type="checkbox" name="item" value="">
+                            </label>
+                            <a href="#"><img class="img img-responsive img-thumbnail" src="resources/images/goods/wineglass_goods.jpg" alt="wineglass"></a>
+                            <p>Инструмент</p>
+                            <p class="title">Коктельный бокал</p>
+                            <p class="price">1950<span class="fa fa-ruble"></span></p>
+                          </div>
+                          <div class="col-sm-4 col-xs-6 padding_none">
+                            <label class="form-checkbox form-icon form-text">
+                              <input type="checkbox" name="item" value="">
+                            </label>
+                            <a href="#"><img class="img img-responsive img-thumbnail" src="resources/images/goods/two_wineglasses.jpg" alt="two_wineglasses"></a>
+                            <p>Инструмент</p>
+                            <p class="title">Стакан для смещивания</p>
+                            <p class="price">1950<span class="fa fa-ruble"></span></p>
+                          </div>
+                          <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 padding_none">
+                            <label class="form-checkbox form-icon form-text">
+                              <input type="checkbox" name="item" value="">
+                            </label>
+                            <a href="#"><img class="img img-responsive img-thumbnail" src="resources/images/goods/holiday_candle.jpg" alt="holiday_candle"></a>
+                            <p>Инструмент</p>
+                            <p class="title">Коктельный бокал</p>
+                            <p class="price">1950<span class="fa fa-ruble"></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- col-sm-9 -->
+                  <div class="col-sm-3 padding_none">
+                    <p>Вы выбрали <span>6</span> объектов</p>
+                    <p class="all_sales">Сумма покупки:</p>
+                    <p class="price">1950<span class="fa fa-ruble"></span></p>
+                    <button class="btn btn-default btn-block">Купить</button>
+                  </div><!-- col-sm-3 -->
+                </div><!-- another_cart -->
+              </div><!-- turnkey_solutions -->
+              <div class="get_price">
+                <div class="col-sm-12 padding_none">
+                  <div class="col-sm-5 left padding_left">
+                    <p>Компания является одним из ведущих оптово - розничных поставщиков свадебных аксессуаров. Наша компания активно развивается на Российском рынке свадебных аксессуаров, постоянно внедряя новые группы товаров. Многолетний опыт работы способствовал приобретению прочных торговых взаимоотношений со многими производителями из стран.</p>
+                  </div><!-- col-sm-5 -->
+                  <div class="col-sm-7 right padding_right">
+                    <div class="row">
+                      <div class="col-sm-5 download_price">
+                        <h4>Скачать</h4>
+                        <p>оптовый прайс</p>
+                      </div>
+                      <div class="col-sm-7 download_form">
+                        <h5>Скачать оптовый прайс</h5>
+                        <form id="bv-bsc-2" class="form-horizontal" action="#" method="post">
+                          <div class="tab-content">
+                            <div class="" id="bsc-2">
+                              <div class="form-group">
+                                <div class="col-sm-12">
+                                  <input type="text" class="form-control" name="email" placeholder="E-mail">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="col-sm-12">
+                                  <input type="text" class="form-control" name="firstName" placeholder="Ваше имя">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="col-sm-12">
+                                  <input type="text" class="form-control" name="phoneNumber" placeholder="Телефон">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-footer clearfix">
+                              <div class="col-sm-12 padding_none">
+                                <button type="submit" class="btn btn-default btn-labeled btn-block">Отправить</button>
+                              </div><!-- col-sm-12 -->
+                            </div><!-- tab-footer -->
+                          </div><!-- tab-content -->
+                        </form><!-- bv-bsc-2 -->
+                      </div><!-- col-sm-7 -->
+                    </div><!-- row -->
+                  </div><!-- col-sm-7 -->
+                </div><!-- col-sm-12 -->
+              </div><!-- get_price -->
+          </section><!-- col-sm-9 -->
+          <aside class="col-sm-3 col-sm-pull-9 padding_none">
+            <div class="wrap_panel_menu">
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading new_goods">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false">
+                          <span class="fa fa-plus pull-right"></span>
+                        Новинки <span>(990)</span>
+                      </a>
+                    </h3>
+                  </div><!-- panel-heading -->
+                  <div id="collapseOne" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                    <div class="panel-body">
+                      Здесь перечислено 990 товаров.
+                    </div>
+                  </div>
+                </div><!-- panel panel-inverse -->
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading discount_goods">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false">
+                          <span class="fa fa-plus pull-right"></span> 
+                        Распродажа <span>(450)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                    <div class="panel-body">
+                      Здесь перечислено 450 товаров.
+                    </div>
+                  </div>
+                </div><!-- panel panel-inverse -->
+
+                <div class="title_aside">
+                  <p class="group">Праздники</p>
+                  <p>1890 товаров в наличии</p>                
+                </div>
+
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading hot_goods">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false">
+                        Свадьба <span>(353)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 353 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false">
+                        День рождения <span>(353)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseFour" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 353 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false">
+                        День учителя <span>(353)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseFive" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 353 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false"> 
+                        Хэллоуин <span>(353)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseSix" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 353 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false">
+                        Новый Год <span>(353)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseSeven" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 353 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false">
+                        День Св. Валентина <span>(353)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseEight" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 353 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false">
+                        23 февраля <span>(353)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseNine" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 353 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false">
+                        8 марта <span>(353)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseTen" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 353 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false">
+                        Пасха <span>(353)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseEleven" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 353 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" aria-expanded="false">
+                        День победы <span>(353)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseTwelve" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 353 товаров.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="title_aside">
+                  <p class="group">Каталог</p>
+                  <p>1890 товаров в наличии</p>                
+                </div>
+
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading new_goods">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen" aria-expanded="false">
+                          <span class="fa fa-plus pull-right"></span> 
+                        Амулеты <span>(189)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseThirteen" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 189 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading discount_goods">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen" aria-expanded="false">
+                          <span class="fa fa-plus pull-right"></span> 
+                        Ароматерапия <span>(603)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseFourteen" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 603 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading" data-placement="right" data-toggle="tooltip" title="Дизайнерская группа нашей компании поможет реализовать Ваши идеи и предложит различные креативные решения, не оставив равнодушными даже самых взыскательных заказчиков интернет-магазина свадебных аксессуаров.">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen" aria-expanded="false"> 
+                        Бижутерия <span>(270)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseFifteen" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 270 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSixteen" aria-expanded="false">
+                          <span class="fa fa-plus pull-right"></span> 
+                        Бизнес <span>(69)</span>
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapseSixteen" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                    <div class="panel-body">                    
+                      <div class="panel-group" id="accordion2">
+                        <div class="panel panel-inverse overflow-hidden">
+                          <div class="panel-heading sub_goods">
+                            <h3 class="panel-title">
+                              <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSecondOne" aria-expanded="false">
+                                Глобусы <span>(2)</span>
+                              </a>
+                            </h3>
+                          </div>
+                        </div><!-- panel -->
+                        <div class="panel panel-inverse overflow-hidden">
+                          <div class="panel-heading sub_goods">
+                            <h3 class="panel-title">
+                              <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSecondTwo" aria-expanded="false">
+                                  <span class="fa fa-plus pull-right"></span>
+                                Дизайнерские блокноты <span>(21)</span>
+                              </a>
+                            </h3>
+                          </div>
+                          <div id="collapseSecondTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                            <div class="panel-body">
+                              Здесь перечислено 21 товаров.
+                            </div>
+                          </div>
+                        </div><!-- panel -->
+                        <div class="panel panel-inverse overflow-hidden">
+                          <div class="panel-heading sub_goods">
+                            <h3 class="panel-title">
+                              <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSecondThree" aria-expanded="false">
+                                  <span class="fa fa-plus pull-right"></span>
+                                Модели <span>(9)</span>
+                              </a>
+                            </h3>
+                          </div>
+                          <div id="collapseSecondThree" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                            <div class="panel-body">
+                              <div class="panel-group" id="accordion3">  
+                                <div class="panel panel-inverse overflow-hidden">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseThirdOne" aria-expanded="false">
+                                        Автомобили <span>(1)</span>
+                                      </a>
+                                    </h3>
+                                  </div>
+                                </div><!-- panel --> 
+                                <div class="panel panel-inverse overflow-hidden">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#" aria-expanded="false">
+                                        Парусники <span>(7)</span>
+                                      </a>
+                                    </h3>
+                                  </div>
+                                </div><!-- panel --> 
+                                <div class="panel panel-inverse overflow-hidden">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion3" href="#" aria-expanded="false">
+                                        Самолеты <span>(1)</span>
+                                      </a>
+                                    </h3>
+                                  </div>
+                                </div><!-- panel -->
+                              </div><!-- panel-group -->
+                            </div>
+                          </div>
+                        </div><!-- panel -->
+                        <div class="panel panel-inverse overflow-hidden">
+                          <div class="panel-heading sub_goods">
+                            <h3 class="panel-title">
+                              <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSecondFour" aria-expanded="false">
+                                Наборы настольные <span>(7)</span>
+                              </a>
+                            </h3>
+                          </div>
+                          <div id="collapseSecondFour" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                            <div class="panel-body">
+                              Здесь перечислено 7 товаров.
+                            </div>
+                          </div>
+                        </div><!-- panel -->
+                        <div class="panel panel-inverse overflow-hidden">
+                          <div class="panel-heading sub_goods">
+                            <h3 class="panel-title">
+                              <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSecondFive" aria-expanded="false">
+                                Сейфы <span>(23)</span>
+                              </a>
+                            </h3>
+                          </div>
+                          <div id="collapseSecondFive" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                            <div class="panel-body">
+                              Здесь перечислено 23 товаров.
+                            </div>
+                          </div>
+                        </div><!-- panel -->
+                        <div class="panel panel-inverse overflow-hidden">
+                          <div class="panel-heading sub_goods">
+                            <h3 class="panel-title">
+                              <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSecondSix" aria-expanded="false">
+                                Чехлы для чемоданов <span>(7)</span>
+                              </a>
+                            </h3>
+                          </div>
+                          <div id="collapseSecondSix" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                            <div class="panel-body">
+                              Здесь перечислено 7 товаров.
+                            </div>
+                          </div>
+                        </div><!-- panel -->
+                      </div><!-- panel-group -->
+
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading hot_goods">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeventeen" aria-expanded="false" style="height: 0px;">
+                          <span class="fa fa-plus pull-right"></span> 
+                        Благовония <span>(189)</span>
+                      </a>
+                    </h3>
+                  </div><!-- panel-heading -->
+                  <div id="collapseSeventeen" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 189 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEighteen" aria-expanded="false" style="height: 0px;">
+                          <span class="fa fa-plus pull-right"></span> 
+                        Галантерея <span>(603)</span>
+                      </a>
+                    </h3>
+                  </div><!-- panel-heading -->
+                  <div id="collapseEighteen" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 603 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading hot_goods">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNineteen" aria-expanded="false" style="height: 0px;">
+                        Игрушки-грелки <span>(270)</span>
+                      </a>
+                    </h3>
+                  </div><!-- panel-heading -->
+                  <div id="collapseNineteen" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 270 товаров.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-inverse overflow-hidden">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwenty" aria-expanded="false"> 
+                        Изделия из бересты <span>(27)</span>
+                      </a>
+                    </h3>
+                  </div><!-- panel-heading -->
+                  <div id="collapseTwenty" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                      Здесь перечислено 27 товаров.
+                    </div>
+                  </div>
+                </div>
+              </div><!-- panel-group -->
+            </div>
+            <div class="interview">
+              <p class="title_aside">Опрос</p>
+              <div class="questions">
+                <p>Кто из производителей на ваш взгляд лучше?</p>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" value="option1" checked="">
+                    Бижутерия
+                  </label>
+                </div><!-- radio -->
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" value="option2">
+                    Диадема, ободок
+                  </label>
+                </div><!-- radio -->
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" value="option2">
+                    Украшения для прически
+                  </label>
+                </div><!-- radio -->
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" value="option2">
+                    Чулки и колготки 
+                  </label>
+                </div><!-- radio -->
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" value="option2">
+                    Перчатки
+                  </label>
+                </div><!-- radio -->
+              </div><!-- questions -->
+              <button class="btn btn-default">Голосовать</button>
+              <p>Результаты голосования <a href="#"><span class="arr_right"></span></a></p>
+            </div><!-- interview -->
+            <div class="our_advants">
+              <p class="title_aside">Наши преимущества</p>
+              <div class="icons_advants"><p>Доставка по всей России</p></div>
+              <div class="icons_advants"><p>Отправка в течении 12 часов</p></div>
+              <div class="icons_advants"><p>Доставка в день заказа</p></div>
+              <div class="icons_advants"><p>Гарантия на все модели</p></div>
+            </div><!-- our_advants -->
+            <div class="order_phone">
+              <p>Вы можете сделать заказ по телефону</p>
+              <p><a href="tel:+388005557070">8 800 555 70 70</a></p>
+              <p>Пн-Пт с <span>10:00</span> до <span>19:00</span><br>Сб-Вс с <span>12:00</span> до <span>16:00</span></p>
+            </div><!-- order_phone -->
+            <div class="usefull">
+              <p class="title_aside">Полезно знать</p>
+              <div class="row">
+                <div class="col-sm-5 padding_none">
+                  <a href="#"><img class="img img-responsive" src="resources/images/goods/pillows.jpg"></a>
+                </div><!-- col-sm-5 -->
+                <div class="col-sm-7 padding_none">
+                  <p>Инструменты</p>
+                  <p><a href="#">Коктельный бокал <span class="arr_right"></span></a></p>
+                </div><!-- col-sm-7 -->
+              </div><!-- row -->
+              <div class="row">
+                <div class="col-sm-5 padding_none">
+                  <a href="#"><img class="img img-responsive" src="resources/images/goods/pillows.jpg"></a>
+                </div><!-- col-sm-5 -->
+                <div class="col-sm-7 padding_none">
+                  <p>Инструменты</p>
+                  <p><a href="#">Коктельный бокал <span class="arr_right"></span></a></p>
+                </div><!-- col-sm-7 -->
+              </div><!-- row -->
+              <div class="row">
+                <div class="col-sm-5 padding_none">
+                  <a href="#"><img class="img img-responsive" src="resources/images/goods/pillows.jpg"></a>
+                </div><!-- col-sm-5 -->
+                <div class="col-sm-7 padding_none">
+                  <p>Инструменты</p>
+                  <p><a href="#">Коктельный бокал <span class="arr_right"></span></a></p>
+                </div><!-- col-sm-7 -->
+              </div><!-- row -->
+              <p>Все статьи <a href="#"><span class="arr_right"></span></a></p>
+            </div><!-- usefull -->
+            <div class="weds_arts">
+              <p class="title_aside">Свадебные статьи</p>
+              <div class="row">
+                <ul class="list-inline">
+                  <li><a href="#">Подготовка к свадьбе</a></li>
+                  <li><a href="#">Праздничный банкет</a></li>
+                  <li><a href="#">Свадебная мода</a></li>
+                  <li><a href="#">Выкуп невесты</a></li>
+                  <li><a href="#">Ресторан для свадьбы</a></li>
+                  <li><a href="#">Праздничный банкет</a></li>
+                  <li><a href="#">Сладкий стол</a></li>
+                  <li><a href="#">Конкурсы на свадьбу</a></li>
+                  <li><a href="#">Свадьбы народов мира</a></li>
+                  <li><a href="#">Как сделать предложение</a></li>
+                  <li><a href="#">Свадебная мода</a></li>
+                  <li><a href="#">Выкуп невесты</a></li>
+                  <li><a href="#">Подготовка к свадьбе</a></li>
+                  <li><a href="#">Праздничный банкет</a></li>
+                  <li><a href="#">Свадебная мода</a></li>
+                  <li><a href="#">Выкуп невесты</a></li>
+                  <li><a href="#">Ресторан для свадьбы</a></li>
+                  <li><a href="#">Праздничный банкет</a></li>
+                  <li><a href="#">Сладкий стол</a></li>
+                  <li><a href="#">Конкурсы на свадьбу</a></li>
+                  <li><a href="#">Свадьбы народов мира</a></li>
+                  <li><a href="#">Как сделать предложение</a></li>
+                  <li><a href="#">Свадебная мода</a></li>
+                  <li><a href="#">Выкуп невесты</a></li>
+                  <li><a href="#">Подготовка к свадьбе</a></li>
+                  <li><a href="#">Праздничный банкет</a></li>
+                  <li><a href="#">Свадебная мода</a></li>
+                  <li><a href="#">Выкуп невесты</a></li>
+                  <li><a href="#">Ресторан для свадьбы</a></li>
+                  <li><a href="#">Праздничный банкет</a></li>
+                  <li><a href="#">Сладкий стол</a></li>
+                  <li><a href="#">Конкурсы на свадьбу</a></li>
+                  <li><a href="#">Свадьбы народов мира</a></li>
+                  <li><a href="#">Как сделать предложение</a></li>
+                  <li><a href="#">Свадебная мода</a></li>
+                  <li><a href="#">Выкуп невесты</a></li>
+                </ul>
+              </div><!-- row -->
+              <p>Все статьи <a href="#"><span class="arr_right"></span></a></p>
+            </div><!-- weds_arts -->
+            <div class="usefull">
+              <p class="title_aside">Новинки</p>
+              <div class="row">
+                <div class="col-sm-5 padding_none">
+                  <a href="#"><img class="img img-responsive img-thumbnail" src="resources/images/goods/wineglass.jpg"></a>
+                </div><!-- col-sm-5 -->
+                <div class="col-sm-7 padding_none">
+                  <p>Инструменты</p>
+                  <p><a href="#">Коктельный бокал <span class="arr_right"></span></a></p>
+                </div><!-- col-sm-7 -->
+              </div><!-- row -->
+              <div class="row">
+                <div class="col-sm-5 padding_none">
+                  <a href="#"><img class="img img-responsive img-thumbnail" src="resources/images/goods/wineglass.jpg"></a>
+                </div><!-- col-sm-5 -->
+                <div class="col-sm-7 padding_none">
+                  <p>Инструменты</p>
+                  <p><a href="#">Коктельный бокал <span class="arr_right"></span></a></p>
+                </div><!-- col-sm-7 -->
+              </div><!-- row -->
+              <div class="row">
+                <div class="col-sm-5 padding_none">
+                  <a href="#"><img class="img img-responsive img-thumbnail" src="resources/images/goods/wineglass.jpg"></a>
+                </div><!-- col-sm-5 -->
+                <div class="col-sm-7 padding_none">
+                  <p>Инструменты</p>
+                  <p><a href="#">Коктельный бокал <span class="arr_right"></span></a></p>
+                </div><!-- col-sm-7 -->
+              </div><!-- row -->
+              <p>Все новинки <a href="#"><span class="arr_right"></span></a></p>
+            </div><!-- usefull -->
+
+          </aside><!-- col-sm-3 -->
+        </div><!-- container -->
+      </div>      
       <footer>
-        
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <p class="logo"><a href="index.html">Lamra.ru</a></p>
+              <p>Все для праздников и свадеб</p>
+              <div class="address">
+                <p class="addr">Адрес в Москве</p>
+                <p class="addr">Ленинградский пр-т, д.2</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.834469911044!2d37.58050001577655!3d55.77874669745838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a218d12f7fd%3A0x3cdb9456ac1d767e!2z0JvQtdC90LjQvdCz0YDQsNC00YHQutC40Lkg0L_RgC4sIDIsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjUwNDA!5e0!3m2!1sru!2sua!4v1449739400173" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div><!-- address -->
+            </div><!-- col-md-3 col-sm-6 col-xs-12 -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h4>Контакты</h4>
+              <div class="list_phones">
+                <p class="phone"><a href="tel:+380675557070">8 067 555 70 70</a></p>
+                <p class="phone"><a href="tel:+380658852536">8 065 885 25 36</a></p>
+                <p class="phone"><a href="tel:+388005254421">8 800 525 44 21</a></p>
+                <p class="phone"><a href="tel:+388007458833">8 800 745 88 33</a></p>   
+                <p class="email"><a href="mailto:info@svadbastyle.com">info@svadbastyle.com</a></p>
+            </div><!-- col-md-3 col-sm-6 col-xs-12 -->
+            <div class="consult">
+              <p>Консультации:</p>
+              <p>Пн-Пт: <span>9:00-12:00</span>/ Суб,Вс: <span>выходной</span></p>
+              <button class="btn btn-default">Перезвоните мне</button>
+            </div><!-- consult -->
+            </div><!-- col-md-3 col-sm-6 col-xs-12 -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h4>Полезная информация</h4>
+              <ul class="list_links">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Карта сайта</a></li>
+                <li><a href="#">Способы оплаты</a></li>
+                <li><a href="#">Способы доставки</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Карта сайта</a></li>
+                <li><a href="#">Способы оплаты</a></li>
+                <li><a href="#">Способы доставки</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Карта сайта</a></li>
+                <li><a href="#">Способы оплаты</a></li>
+                <li><a href="#">Способы доставки</a></li>
+              </ul>
+            </div><!-- col-md-3 col-sm-6 col-xs-12 -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <h4>Присоединяйтесь к нам в соцсетях:</h4>
+              <ul class="social list-inline nav-justified">
+                <li><a href="#" target="_blank"><span class="fa fa-vk"></span></a></li>
+                <li><a href="#" target="_blank"><span class="fa fa-facebook"></span></a></li>
+                <li><a href="#" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                <li><a href="#" target="_blank"><span class="fa fa-odnoklassniki"></span></a></li>
+              </ul>              
+              <form id="bv-bsc-3" class="form-horizontal" action="#" method="post">
+                <h4>Подписывайтесь на новости:</h4>
+                <div class="tab-content">
+                  <div class="" id="bsc-1">
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <input type="text" class="form-control" name="email" placeholder="E-mail">
+                      </div><!-- col-sm-12 -->
+                    </div><!-- form-group -->
+                  </div><!-- bsc-1 -->
+                  <div class="tab-footer clearfix">
+                    <div class="col-sm-12 padding_none">
+                      <button type="submit" class="btn btn-default btn-labeled btn-block">Подписаться</button>
+                    </div><!-- col-sm-12 -->
+                  </div><!-- tab-footer -->
+                </div><!-- tab-content -->
+              </form>
+              <div class="i-pay">
+                <h4>Способы оплаты:</h4>
+                <ul class="list-inline nav-justified text-center">
+                  <li><a href="#" target="_blank"><span class="visa"></span></a></li>
+                  <li><a href="#" target="_blank"><span class="mastercard"></span></a></li>
+                  <li><a href="#" target="_blank"><span class="webmoney"></span></a></li>
+                  <li><a href="#" target="_blank"><span class="qiwi"></span></a></li>
+              </ul> 
+              </div><!-- i-pay -->
+            </div><!-- col-md-3 col-sm-6 col-xs-12 -->
+            <p class="copywrite">© LAMRA.RU <br> Все права защищены</p>
+          </div><!-- row -->
+        </div><!-- container -->
       </footer>
-    </div>
+    </div><!-- wrapper -->
     
     <!-- Scripts -->
-    <script src="resources/js/jquery-1.11.2.min.js"></script> 
+    <script src="resources/js/jquery-2.1.1.min.js"></script> 
     <script src="resources/js/bootstrap.min.js"></script> 
     <script src="resources/js/scripts.js"></script>
+    <script src="resources/js/bootstrapValidator.min.js"></script>
+    <script src="resources/js/jquery.maskedinput.min.js"></script>
+    <script src="resources/js/form-validation.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery.fancybox.pack.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+      });
+
+      
+      if($(window).width()>=400){
+        $('footer .address iframe').css('width',$('footer .address').width()).css('height',$('footer .address').width()*.7);
+      }
+
+      if($(window).width()<400){
+        $('footer .address iframe').css('width',$('footer .address').width()*.85).css('height',$('footer .address').width()*.7);
+      }
+
+      function equalHeight(data){
+        var conts_height = data.height();
+        if(data.next().height()>conts_height){
+          data.css('height',data.next().height());
+        }else{
+          data.next().css('height',data.height());
+        }
+      }
+
+      if($(window).width() > 991){
+
+        equalHeight($('.welcome .add_border:first-child'));
+        equalHeight($('.turnkey_solutions .another_cart .col-sm-9'));
+        equalHeight($('.get_price .left'));    
+        $('.get_price .right .download_price').css('height',$('.get_price .right .download_price').parent().parent().height());  
+        $('.get_price .right .download_form').css('height',$('.get_price .right .download_price').parent().parent().height());  
+
+        $(window).resize(function(){
+          equalHeight($('.welcome .add_border:first-child'));
+          equalHeight($('.turnkey_solutions .another_cart .col-sm-9'));
+          equalHeight($('.get_price .left'));
+        });
+
+      }
+
+      if($(window).width() > 767){
+        equalHeight($('.get_price .left'));     
+
+        $(window).resize(function(){
+          equalHeight($('.get_price .left'));
+        });
+
+      }
+    </script>
+    <script type="text/javascript"> 
+      $(document).ready(function() { 
+        $("a.fancyimage").fancybox(); 
+      }); 
+    </script>
   </body>
 </html>
